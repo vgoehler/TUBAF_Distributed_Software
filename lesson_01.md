@@ -12,7 +12,6 @@ narrator: Deutsch Male
 
 edit: true
 date: 2026
-icon: img/TUBAF_Logo_EN_blau.png
 
 logo: 
 attribute: 
@@ -34,7 +33,7 @@ Volker Göhler, TU Bergakademie Freiberg
 
 ------------------------------
 
-> "Code" auf https://github.com/vgoehler/TUBAF_Distributed_Software als Open Educational Ressource.
+> "Code" auf https://github.com/vgoehler/TUBAF_Distributed_Software als Open Educational Resource.
 
 ----------------------------------------
 
