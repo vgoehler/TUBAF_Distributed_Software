@@ -1,0 +1,179 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows the items to wrap as needed */
+  align-items: stretch;
+  gap: 20px; /* Adds both horizontal and vertical spacing between items */
+}
+
+.flex-child {
+  flex: 4;
+  margin-right: 20px; /* Adds space between the columns */
+  min-width: 200px;
+}
+
+.flex-child-1 {
+  flex: 1;
+  margin-right: 20px; /* Adds space between the columns */
+  min-width: 200px;
+}
+
+.flex-child-2 {
+  flex: 2;
+  margin-right: 20px; /* Adds space between the columns */
+  min-width: 200px;
+}
+
+.flex-child-3 {
+  flex: 3;
+  margin-right: 20px; /* Adds space between the columns */
+  min-width: 200px;
+}
+
+.flex-child-4 {
+  flex: 4;
+  margin-right: 20px; /* Adds space between the columns */
+  min-width: 200px;
+}
+
+@media (max-width: 600px) {
+  .flex-child-1,
+  .flex-child-2,
+  .flex-child-3,
+  .flex-child-4 {
+    flex: 100%; /* Makes the child divs take up the full width on slim devices */
+    margin-right: 0; /* Removes the right margin */
+    min-width: 200px;
+  }
+}
+
+.colorbox {
+    min-width: 400px;
+    width:30%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+.colorbox__title {
+    padding: 0.35rem 0.6rem;
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+.head {
+    font-size: x-large;
+    font-weight: bold;
+}
+.subhead {
+    font-size: large;
+    font-weight: bold;
+}
+
+
+/* Steps */
+.colorbox--steps {
+  background: rgb(var(--course-steps-bg-rgb));
+}
+
+.colorbox--steps > .colorbox__title {
+  background: rgb(var(--course-steps-title-bg-rgb));
+}
+
+/* Hints */
+.colorbox--hints {
+  background: rgb(var(--course-hints-bg-rgb));
+}
+
+.colorbox--hints > .colorbox__title {
+  background: rgb(var(--course-hints-title-bg-rgb));
+}
+
+/* But */
+.colorbox--but {
+  background: rgb(var(--course-but-bg-rgb));
+}
+
+.colorbox--but > .colorbox__title {
+  background: rgb(var(--course-but-title-bg-rgb));
+}
+
+/* Callout */
+
+.lia-callout {
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.lia-callout--note {
+  background: rgb(var(--course-note-bg-rgb));
+  width: 50%;
+}
+
+/* Error Workflow Callout */
+.colorbox--errorwf {
+  background: rgb(var(--course-errorwf-bg-rgb));
+  border: 1px solid rgb(var(--course-errorwf-accent-rgb));
+}
+
+.colorbox--errorwf > .colorbox__title {
+  background: rgb(var(--course-errorwf-accent-rgb));
+  color: var(--color-text);
+}
+
+/* Batch Callout */
+.colorbox--batch {
+  background: rgb(var(--course-batch-bg-rgb));
+  border: 1px solid rgb(var(--course-batch-accent-rgb));
+}
+
+.colorbox--batch > .colorbox__title {
+  background: rgb(var(--course-batch-accent-rgb));
+  color: var(--color-text);
+}
+
+:root {
+  /* Steps box */
+  --course-steps-bg-rgb: 232, 215, 26;
+  --course-steps-title-bg-rgb: 232, 137, 26;
+
+  /* Hints box */
+  --course-hints-bg-rgb: 26, 194, 232;
+  --course-hints-title-bg-rgb: 58, 146, 234;
+
+  /* but box */
+  --course-but-bg-rgb: 240, 247, 255;       /* #F0F7FF */
+  --course-but-title-bg-rgb: 74, 144, 226;  /* #4A90E2 */
+
+  /* callout box */
+  --course-note-bg-rgb: 236, 253, 245;
+
+  --course-errorwf-bg-rgb: 236, 253, 245;       /* #ECFDF5 */
+  --course-errorwf-accent-rgb: 16, 185, 129;    /* #10B981 */
+
+  --course-batch-bg-rgb: 240, 253, 244;      /* #F0FDF4 */
+  --course-batch-accent-rgb: 5, 150, 105;    /* #059669 */
+}
+
+:root.lia-variant-dark {
+  /* Steps box */
+  --course-steps-bg-rgb: 90, 82, 0;
+  --course-steps-title-bg-rgb: 122, 63, 0;
+
+  /* Hints box */
+  --course-hints-bg-rgb: 0, 75, 87;
+  --course-hints-title-bg-rgb: 13, 59, 122;
+
+  /* but box */
+  --course-but-bg-rgb: 18, 28, 40;          /* dunkles „blue-ish“ Panel */
+  --course-but-title-bg-rgb: 35, 82, 150;   /* dunkleres Blau für Titel */
+
+  /* callout box */
+  --course-note-bg-rgb: 22, 38, 32;
+
+  --course-errorwf-bg-rgb: 22, 38, 32;          /* dunkles mint */
+  --course-errorwf-accent-rgb: 16, 185, 129;    /* Akzent kann bleiben */
+
+  --course-batch-bg-rgb: 18, 34, 26;         /* dunkles grünliches Panel */
+  --course-batch-accent-rgb: 5, 150, 105;    /* Akzent kann bleiben */
+}
