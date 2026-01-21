@@ -2,15 +2,15 @@
 
 SHELL := /usr/bin/env bash
 
-LESSON_MD   := $(wildcard lesson_*.md)
+LESSON_MD   := $(wildcard vorlesung_*.md)
 PLAN_MD     := $(wildcard planning_*.md)
 
-LESSON_IDS  := $(sort $(patsubst lesson_%.md,%,$(LESSON_MD)))
+LESSON_IDS  := $(sort $(patsubst vorlesung_%_architektur.md,%,$(LESSON_MD)))
 
-LIA_PDFS    := $(addprefix n8n_,$(addsuffix .pdf,$(LESSON_IDS)))
+LIA_PDFS    := $(addprefix distributed_software_,$(addsuffix .pdf,$(LESSON_IDS)))
 PLAN_PDFS   := $(addprefix planning_,$(addsuffix .pdf,$(LESSON_IDS)))
 
-WEBDAV_DIR  := Freigaben/DISTSW
+WEBDAV_DIR  := Freigaben/DISTSW-VL
 
 
 all: pdf
@@ -22,15 +22,14 @@ lia: $(LIA_PDFS)
 plan: $(PLAN_PDFS)
 
 # lesson_01.md -> n8n_01.pdf
-n8n_%.pdf: lesson_%.md
+distributed_software_%.pdf: vorlesung_%_architektur.md
 	@echo "Baue Lesson $*"
 	liascript-exporter \
 		--input "$<" \
 		--output "n8n_$*" \
 		--format pdf
 
-# planing_01.md -> planing_01.pdf
-planing_%.pdf: planing_%.md
+planning_%.pdf: planning_lesson_%.md
 	@echo "Baue Planung $*"
 	pandoc -t pdf "$<" -o "$@"
 

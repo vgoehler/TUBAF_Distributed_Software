@@ -132,6 +132,57 @@
   color: var(--color-text);
 }
 
+/* Base class for the list */
+.arrow-list {
+  list-style-type: none; /* Remove default dots */
+  padding-left: 1.5rem;
+}
+
+.arrow-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+/* Create the arrow using a Unicode character */
+.arrow-list li::before {
+  content: "➡"; 
+  display: inline-block;
+  width: 1.5em;
+  font-weight: bold;
+  flex-shrink: 0;
+  transform: translateY(0.15rem); 
+}
+
+/* Color Modifier: Green */
+.arrows-green li::before {
+  color: rgb(var(--arrow-green));
+}
+
+/* Color Modifier: Red */
+.arrows-red li::before {
+  color: rgb(var(--arrow-red));
+}
+
+/* Kopfzeile (thead) einfärben */
+table thead tr th {
+  background-color: rgb(var(--tu-blau)) !important;
+  color: rgb(var(--text-header)) !important;
+}
+
+/* Erste Spalte (tbody th oder td:first-child) einfärben */
+table tbody tr td:first-child {
+  background-color: rgba(var(--tu-blau), 0.1); /* Dezentes Blau für die erste Spalte */
+  border-left: 4px solid rgb(var(--tu-blau));  /* Akzentlinie links */
+  font-weight: bold;
+}
+
+/* Jede gerade Zeile (Even Rows) mit Hintergrund */
+table tbody tr:nth-child(even) {
+  background-color: rgb(var(--row-even));
+}
+
+
+
 :root {
   /* Steps box */
   --course-steps-bg-rgb: 232, 215, 26;
@@ -153,6 +204,13 @@
 
   --course-batch-bg-rgb: 240, 253, 244;      /* #F0FDF4 */
   --course-batch-accent-rgb: 5, 150, 105;    /* #059669 */
+
+  --arrow-green: 34, 197, 94;  /* #22c55e */
+  --arrow-red: 239, 68, 68;    /* #ef4444 */
+
+  --tu-blau: 0, 74, 154;        /* Original TU Blau */
+  --row-even: 245, 245, 245;    /* Hellgrau für Lichtmodus */
+  --text-header: 255, 255, 255; /* Weißer Text für Header */
 }
 
 :root.lia-variant-dark {
@@ -176,4 +234,10 @@
 
   --course-batch-bg-rgb: 18, 34, 26;         /* dunkles grünliches Panel */
   --course-batch-accent-rgb: 5, 150, 105;    /* Akzent kann bleiben */
+
+  --arrow-green: 74, 222, 128; 
+  --arrow-red: 248, 113, 113;
+
+  --tu-blau: 40, 110, 200;    /* Etwas helleres Blau für Darkmode */
+  --row-even: 45, 45, 45;      /* Dunkleres Grau für Darkmode */
 }
