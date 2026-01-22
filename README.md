@@ -8,7 +8,7 @@ This repository contains the course materials for the Distributed Software cours
 
 ## Course Structure
 
-- [Lesson 01: Introduction to Distributed Software](lesson_01.md)
+- [Lesson 01: Klassische Software Architektur und Verteilte Software](vorlesung_01_architektur.md)
 - [Planning for Lesson 01](planning_lesson_01.md)
 
 ## Related Courses
