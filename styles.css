@@ -49,17 +49,61 @@
 .colorbox {
     min-width: 400px;
     width:30%;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px;
     color: var(--color-text);
-}
+    border: 1px solid rgba(var(--box-accent-rgb), 0.3);
+    border-left: 5px solid rgba(var(--box-accent-rgb), 1);
+}   
 .colorbox__title {
-    padding: 0.35rem 0.6rem;
-    border-radius: 8px;
-    margin-bottom: 0.6rem;
-    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    color: rgb(var(--box-accent-rgb));
+    background: rgba(var(--box-accent-rgb), 0.15);
+    display: flex;
+    align-items: center;
 }
+/* Purpose-based Mapping */
+.colorbox--info  {
+    --box-accent-rgb: var(--box-info-accent);
+    background: rgb(var(--box-info-bg)); 
+}
+.colorbox--steps {
+    --box-accent-rgb: var(--box-steps-accent);
+    background: rgb(var(--box-steps-bg)); 
+}
+.colorbox--pros  {
+    --box-accent-rgb: var(--box-pros-accent);
+    background: rgb(var(--box-pros-bg)); 
+}
+.colorbox--cons  {
+    --box-accent-rgb: var(--box-cons-accent);
+    background: rgb(var(--box-cons-bg)); 
+}
+.colorbox--danger {
+    width: auto;
+}
+.colorbox--warning {
+    width: auto;
+}
+
+.colorbox--danger .colorbox__title::before {
+    content: "⚠️";
+    margin-right: 0.5em;
+    font-size: 1.1em;
+}
+.colorbox--warning .colorbox__title::before {
+    content: "🧭";
+    margin-right: 0.5em;
+    font-size: 1.1em;
+}
+
 .head {
     font-size: x-large;
     font-weight: bold;
@@ -67,16 +111,6 @@
 .subhead {
     font-size: large;
     font-weight: bold;
-}
-
-
-/* Steps */
-.colorbox--steps {
-  background: rgb(var(--course-steps-bg-rgb));
-}
-
-.colorbox--steps > .colorbox__title {
-  background: rgb(var(--course-steps-title-bg-rgb));
 }
 
 /* Hints */
@@ -96,6 +130,7 @@
 .colorbox--but > .colorbox__title {
   background: rgb(var(--course-but-title-bg-rgb));
 }
+
 
 /* Callout */
 
@@ -184,9 +219,21 @@ table tbody tr:nth-child(even) {
 
 
 :root {
-  /* Steps box */
-  --course-steps-bg-rgb: 232, 215, 26;
-  --course-steps-title-bg-rgb: 232, 137, 26;
+  /* Info (formerly hints) - Blue */
+  --box-info-bg: 240, 249, 255;
+  --box-info-accent: 14, 116, 144;
+
+  /* Steps (Features) - Gold/Amber */
+  --box-steps-bg: 255, 251, 235;
+  --box-steps-accent: 180, 83, 9;
+
+  /* Pros (Advantages) - Green */
+  --box-pros-bg: 240, 253, 244;
+  --box-pros-accent: 21, 128, 61;
+
+  /* Cons (Disadvantages) - Rose/Red */
+  --box-cons-bg: 254, 242, 242;
+  --box-cons-accent: 185, 28, 28;
 
   /* Hints box */
   --course-hints-bg-rgb: 26, 194, 232;
@@ -214,9 +261,17 @@ table tbody tr:nth-child(even) {
 }
 
 :root.lia-variant-dark {
-  /* Steps box */
-  --course-steps-bg-rgb: 90, 82, 0;
-  --course-steps-title-bg-rgb: 122, 63, 0;
+  --box-info-bg: 12, 34, 45;
+  --box-info-accent: 34, 211, 238;
+
+  --box-steps-bg: 38, 28, 0;
+  --box-steps-accent: 251, 191, 36;
+
+  --box-pros-bg: 10, 30, 18;
+  --box-pros-accent: 74, 222, 128;
+
+  --box-cons-bg: 40, 15, 15;
+  --box-cons-accent: 248, 113, 113;
 
   /* Hints box */
   --course-hints-bg-rgb: 0, 75, 87;
