@@ -26,7 +26,7 @@ distributed_software_%.pdf: vorlesung_%_architektur.md
 	@echo "Baue Lesson $*"
 	liascript-exporter \
 		--input "$<" \
-		--output "vorlesung_$*_architektur" \
+		--output "distributed_software_$*_architektur" \
 		--format pdf
 
 planning_%.pdf: planning_lesson_%.md

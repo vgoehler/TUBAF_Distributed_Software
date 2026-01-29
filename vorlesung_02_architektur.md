@@ -253,6 +253,12 @@ C. Event-Driven Architecture (EDA)
 - https://www.ibm.com/think/topics/event-driven-architecture
 - https://www.sap.com/germany/products/technology-platform/what-is-event-driven-architecture.html
 
+<!-- class="head" -->
+Alle als 📄 PDF
+
+[alle obigen Artikel in der 🗂️ Nextcloud](https://ificloud.xsitepool.tu-freiberg.de/index.php/s/j6Gmcw4aCRZ2Tyd)
+
+
 #### Service-orientierte Architektur (SOA)
 
 <!-- class="head" -->
