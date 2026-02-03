@@ -40,7 +40,7 @@ Volker Göhler, TU Bergakademie Freiberg
 
 ![Welcome](https://upload.wikimedia.org/wikipedia/commons/0/02/Fig4b_HPCC.jpg "Fvillanustre, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons")<!-- style="height:300px;" -->
 
-> "Code" auf https://raw.githubusercontent.com/vgoehler/TUBAF_Distributed_Software/ als Open Educational Ressource.
+> "Code" auf https://github.com/vgoehler/TUBAF_Distributed_Software als Open Educational Ressource.
 
 ----------------------------------------
 
