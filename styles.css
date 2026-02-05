@@ -145,6 +145,16 @@
   width: 50%;
 }
 
+.lia-callout--question {
+  background: rgb(var(--box-steps-bg));
+  width: 50%;
+}
+.lia-callout--question::before {
+    content: "❓";
+    margin-right: 0.5em;
+    font-size: 1.1em;
+}
+
 /* Error Workflow Callout */
 .colorbox--errorwf {
   background: rgb(var(--course-errorwf-bg-rgb));
