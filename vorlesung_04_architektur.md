@@ -21,7 +21,7 @@ comment: Distributed Software
 
 import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
 
-link: ./styles.css
+link:   https://raw.githubusercontent.com/vgoehler/LiaScript_CSS_Provider/refs/heads/main/dist/university.css
 
 title: Verteilte Software -- Architektur IV
 
